@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diagramas UML · TP de POO</title>
+<style>
+* { box-sizing: border-box; }
+body { background: #f4f6fa; color: #172336; font: 16px system-ui, sans-serif; margin: 0; }
+main { max-width: 1180px; padding: 30px 20px; margin: auto; }
+h1 { margin: 0 0 8px; }
+p { margin: 0 0 22px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+section { background: white; border: 1px solid #ced7e2; padding: 16px; border-radius: 8px; break-inside: avoid; }
+h2 { font-size: 17px; margin: 0 0 16px; }
+.diagram { display: flex; align-items: center; flex-direction: column; }
+.class { border: 1px solid #172336; min-width: 210px; max-width: 100%; }
+h3 { text-align: center; font-size: 15px; margin: 0; padding: 7px 12px; background: #eaf0f7; }
+.rows { border-top: 1px solid #172336; padding: 6px 10px; font: 13px/1.5 ui-monospace, monospace; overflow-wrap: anywhere; }
+.arrow { height: 35px; width: 2px; background: #172336; position: relative; }
+.arrow::before, .arrow::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-inline: 9px solid transparent; border-bottom: 14px solid #172336; }
+.arrow::after { top: 2px; border-inline-width: 7px; border-bottom: 11px solid white; }
+@media (max-width: 740px) { .grid { grid-template-columns: 1fr; } }
+@media print { body { background: white; } main { padding: 0; } }
+</style>
+<main>
+<h1>Diagramas de clases UML</h1>
+<p><strong>+</strong> público · <strong>−</strong> privado · <strong>~</strong> visible en el paquete. El triángulo vacío apunta a la clase padre.</p>
+<div class="grid">
+<section><h2>Herencia · 1. Persona y Empleado</h2><div class="diagram"><div class="class"><h3>Persona</h3><div class="rows"><div>- nombre: String</div><div>- edad: int</div></div><div class="rows"><div>+ Persona(nombre: String, edad: int)</div><div>+ getNombre(): String</div><div>+ setNombre(nombre: String): void</div><div>+ getEdad(): int</div><div>+ setEdad(edad: int): void</div></div></div><div class="arrow" role="img" aria-label="Hereda de la clase superior"></div><div class="class"><h3>Empleado</h3><div class="rows"><div>- salario: double</div></div><div class="rows"><div>+ Empleado(nombre: String, edad: int, salario: double)</div><div>+ getSalario(): double</div><div>+ setSalario(salario: double): void</div><div>+ mostrarDatos(): void</div></div></div></div></section>
+<section><h2>Herencia · 2. Vehiculo y Auto</h2><div class="diagram"><div class="class"><h3>Vehiculo</h3><div class="rows"><div>- marca: String</div><div>- modelo: String</div></div><div class="rows"><div>+ Vehiculo(marca: String, modelo: String)</div><div>+ getMarca(): String</div><div>+ setMarca(marca: String): void</div><div>+ getModelo(): String</div><div>+ setModelo(modelo: String): void</div></div></div><div class="arrow" role="img" aria-label="Hereda de la clase superior"></div><div class="class"><h3>Auto</h3><div class="rows"><div>- cant_Puertas: int</div></div><div class="rows"><div>+ Auto(marca: String, modelo: String, cant_Puertas: int)</div><div>+ getCant_Puertas(): int</div><div>+ setCant_Puertas(cant_Puertas: int): void</div><div>+ mostrarDatos(): void</div></div></div></div></section>
+<section><h2>Herencia · 3. Animal y Perro</h2><div class="diagram"><div class="class"><h3>Animal</h3><div class="rows"><div>- nombre: String</div><div>- edad: int</div></div><div class="rows"><div>+ Animal(nombre: String, edad: int)</div><div>+ getNombre(): String</div><div>+ setNombre(nombre: String): void</div><div>+ getEdad(): int</div><div>+ setEdad(edad: int): void</div></div></div><div class="arrow" role="img" aria-label="Hereda de la clase superior"></div><div class="class"><h3>Perro</h3><div class="rows"><div>- raza: String</div></div><div class="rows"><div>+ Perro(nombre: String, edad: int, raza: String)</div><div>+ getRaza(): String</div><div>+ setRaza(raza: String): void</div><div>+ ladrar(): void</div></div></div></div></section>
+<section><h2>Clases y objetos · 1. Persona</h2><div class="diagram"><div class="class"><h3>Persona</h3><div class="rows"><div>~ nombre: String</div><div>~ edad: int</div></div><div class="rows"><div>+ Persona()</div></div></div></div></section>
+<section><h2>Clases y objetos · 2. Libro</h2><div class="diagram"><div class="class"><h3>Libro</h3><div class="rows"><div>- titulo: String</div><div>- autor: String</div><div>- anio: int</div></div><div class="rows"><div>+ Libro(titulo: String, autor: String, anio: int)</div><div>+ mostrarDatos(): void</div></div></div></div></section>
+<section><h2>Clases y objetos · 3. Auto</h2><div class="diagram"><div class="class"><h3>Auto</h3><div class="rows"><div>- marca: String</div><div>- modelo: String</div><div>- color: String</div></div><div class="rows"><div>+ Auto(marca: String, modelo: String, color: String)</div><div>+ mostrarDatos(): void</div></div></div></div></section>
+<section><h2>Clases y objetos · 4. CuentaBncaria</h2><div class="diagram"><div class="class"><h3>CuentaBncaria</h3><div class="rows"><div>- saldo: double</div></div><div class="rows"><div>+ CuentaBncaria()</div><div>+ getSaldo(): double</div><div>+ setSaldo(saldo: double): void</div></div></div></div></section>
+<section><h2>Clases y objetos · 5. Rectangulo</h2><div class="diagram"><div class="class"><h3>Rectangulo</h3><div class="rows"><div>- base: double</div><div>- altura: double</div></div><div class="rows"><div>+ Rectangulo()</div><div>+ getBase(): double</div><div>+ setBase(base: double): void</div><div>+ getAltura(): double</div><div>+ setAltura(altura: double): void</div><div>+ calcularArea(): double</div></div></div></div></section>
+</div>
+</main>
+</html>
