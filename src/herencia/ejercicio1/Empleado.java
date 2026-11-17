@@ -7,7 +7,7 @@ public class Empleado extends Persona {
     public Empleado(String nombre, int edad, double salario) {
         // La clase padre inicializa los atributos que le pertenecen.
         super(nombre, edad);
-        setSalario(salario);
+        this.salario = salario;
     }
 
     // Devuelve el salario.
@@ -15,18 +15,8 @@ public class Empleado extends Persona {
         return salario;
     }
 
-    // Valida el nuevo valor y cambia el salario.
+    // Cambia el salario.
     public void setSalario(double salario) {
-        if (!Double.isFinite(salario) || salario < 0) {
-            throw new IllegalArgumentException("El salario debe ser un número mayor o igual a cero.");
-        }
         this.salario = salario;
-    }
-
-    // Muestra los datos de Persona y el salario del empleado.
-    public void mostrarDatos() {
-        System.out.println("Nombre: " + getNombre());
-        System.out.println("Edad: " + getEdad());
-        System.out.println("Salario: $" + salario);
     }
 }

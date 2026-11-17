@@ -6,8 +6,8 @@ public class Animal {
 
     // El constructor recibe los datos iniciales del objeto.
     public Animal(String nombre, int edad) {
-        setNombre(nombre);
-        setEdad(edad);
+        this.nombre = nombre;
+        this.edad = edad;
     }
 
     // Devuelve el nombre.
@@ -15,11 +15,8 @@ public class Animal {
         return nombre;
     }
 
-    // Valida el nuevo valor y cambia el nombre.
+    // Cambia el nombre.
     public void setNombre(String nombre) {
-        if (nombre == null || nombre.isBlank()) {
-            throw new IllegalArgumentException("Completá el nombre.");
-        }
         this.nombre = nombre;
     }
 
@@ -28,11 +25,8 @@ public class Animal {
         return edad;
     }
 
-    // Valida el nuevo valor y cambia la edad.
+    // Cambia la edad.
     public void setEdad(int edad) {
-        if (edad < 0) {
-            throw new IllegalArgumentException("La edad no puede ser negativa.");
-        }
         this.edad = edad;
     }
 }

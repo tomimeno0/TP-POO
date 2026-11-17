@@ -7,7 +7,7 @@ public class Perro extends Animal {
     public Perro(String nombre, int edad, String raza) {
         // La clase padre inicializa los atributos que le pertenecen.
         super(nombre, edad);
-        setRaza(raza);
+        this.raza = raza;
     }
 
     // Devuelve la raza.
@@ -15,11 +15,8 @@ public class Perro extends Animal {
         return raza;
     }
 
-    // Valida el nuevo valor y cambia la raza.
+    // Cambia la raza.
     public void setRaza(String raza) {
-        if (raza == null || raza.isBlank()) {
-            throw new IllegalArgumentException("Completá la raza.");
-        }
         this.raza = raza;
     }
 

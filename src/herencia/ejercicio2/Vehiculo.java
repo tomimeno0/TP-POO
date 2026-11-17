@@ -6,8 +6,8 @@ public class Vehiculo {
 
     // El constructor recibe los datos iniciales del objeto.
     public Vehiculo(String marca, String modelo) {
-        setMarca(marca);
-        setModelo(modelo);
+        this.marca = marca;
+        this.modelo = modelo;
     }
 
     // Devuelve la marca.
@@ -15,11 +15,8 @@ public class Vehiculo {
         return marca;
     }
 
-    // Valida el nuevo valor y cambia la marca.
+    // Cambia la marca.
     public void setMarca(String marca) {
-        if (marca == null || marca.isBlank()) {
-            throw new IllegalArgumentException("Completá la marca.");
-        }
         this.marca = marca;
     }
 
@@ -28,11 +25,8 @@ public class Vehiculo {
         return modelo;
     }
 
-    // Valida el nuevo valor y cambia el modelo.
+    // Cambia el modelo.
     public void setModelo(String modelo) {
-        if (modelo == null || modelo.isBlank()) {
-            throw new IllegalArgumentException("Completá el modelo.");
-        }
         this.modelo = modelo;
     }
 }

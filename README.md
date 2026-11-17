@@ -1,6 +1,6 @@
 # Trabajo práctico de POO
 
-En Eclipse, abrí el paquete del ejercicio, seleccioná su archivo `Main.java` y elegí **Run As → Java Application**. La salida aparece en **Console**.
+En Eclipse, abrí el paquete del ejercicio, seleccioná su archivo `Main.java` y elegí **Run As → Java Application**. La salida aparece en **Console**. El ejercicio 4 de Clases y Objetos solo define la clase `CuentaBncaria`.
 
 - `herencia.ejercicio1` a `herencia.ejercicio3` corresponden al TP de herencia y validaciones.
 - `clasesyobjetos.ejercicio1` a `clasesyobjetos.ejercicio5` corresponden al TP de clases y objetos.

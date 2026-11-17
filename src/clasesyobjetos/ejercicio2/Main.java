@@ -6,7 +6,7 @@ public class Main {
         Libro libro1 = new Libro("El principito", "Antoine de Saint-Exupéry", 1943);
         Libro libro2 = new Libro("Ficciones", "Jorge Luis Borges", 1944);
 
-        libro1.mostrarDatos();
-        libro2.mostrarDatos();
+        System.out.println(libro1.titulo + " | " + libro1.autor + " | " + libro1.anio);
+        System.out.println(libro2.titulo + " | " + libro2.autor + " | " + libro2.anio);
     }
 }
